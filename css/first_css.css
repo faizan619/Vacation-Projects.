@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: darkblue; */
+}
+.whole{
+    font-weight: bold;
+    text-decoration: none;
+}
+nav{
+    height: 12vh;
+    background-color: darkkhaki;
+    text-align: center;
+
+}
+nav .navbar .nav_button{
+    float: right;
+    margin-top: 0.9rem;
+    margin-right: 0.5rem;
+
+}
+nav .navbar .nav_button button{
+    padding: 0.6rem;
+    font-weight: bold;
+    /* border-color: white; */
+    margin-left: 1rem;
+}
+#login:hover{
+    color: black;
+    background-color: white;
+    border-radius: 0%;
+    cursor: grab;
+}
+#login{
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    font-style: none;
+
+}
+#register{
+    background-color: white;
+}
+#register:hover{
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    cursor: zoom-in;
+
+}
+.nav_menu{
+    display: inline-block;
+    text-decoration: none;
+
+}
+.nav_menu ul li a{
+    color: white;
+}
+.nav_menu ul li{
+    display: inline-block;
+    padding: 1rem;
+    margin-top: .4rem;
+    /* color: green; */
+    
+}
+.nav_image img{
+    width: 13.5rem;
+    cursor: alias;
+    float: left;
+}
+#home:hover{
+    color: darkviolet;
+}
+#blog:hover{
+    color: green;
+}
+#youtube:hover{
+    color: red;
+}
+#about:hover{
+    color: black;
+}
+section .sectionbar .section1 .sect1{
+    display: inline-block;
+}
+section .sectionbar .section1 .sect1 p{
+    display: inline-block;
+    border: 3px solid red;
+    border-radius: .4rem;
+    border-top-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    width:30rem;
+    margin-left: 5rem;
+    margin-top: 4.5rem;
+    padding: 2rem;
+    word-spacing: 0.5rem;
+}
+section .sectionbar .section1 .sect1 p:hover{
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+section .sectionbar .section1{
+    height: 100vh;
+}
+#bas{
+    border: 2px solid red;
+    width: 20rem;
+    float: right;
+    /* display: inline-block; */
+    margin-top: 4.5rem;
+    margin-right: 20rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    word-spacing: 1rem;
+}
