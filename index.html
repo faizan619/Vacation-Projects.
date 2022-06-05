@@ -4,40 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/first_css.css">
-    <title>navbar</title>
+    <title>practise responsive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style-type: none;
+        }
+        .logo{
+            font-size: 32px;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            /* align-content: space-between; */
+            justify-content: space-between;
+            border: 2px solid red;
+            padding: 1rem .5rem;
+            background-color: tomato;
+            color: white;
+        }
+        .nav_link a{
+            color: white;
+        }
+        .menu{
+            display: flex;
+            gap: 1rem;
+            /* transition: .4s ease; */
+            font-size: 18px;
+        }
+        .menu li:hover{
+            background-color: red;
+            /* padding: .1rem; */
+            border-radius: 5px;
+            transition: .6s ease;
+        }
+        .menu li{
+            padding:4px 14px;
+        }
+        .project{
+            position: relative;
+        }
+        .dropdown{
+            position: absolute;
+            background-color: red;
+            padding: 1em 0;
+            top: 25px;
+            border-radius: 1rem;
+            display: none;
+        }
+        .dropdown li +li{
+            margin-top: 20px;
+        }
+        .dropdown li{
+            padding: 7px 15px;
+            /* border: 2px solid green; */
+            width: 9em;
+            text-align: center;
+        }
+        .dropdown li:hover{
+            background-color: tomato;
+            border-radius: .7rem;
+            color: black;
+        }
+        .project:hover .dropdown{
+            display: block;
+        }
+        .icon{
+            display: none;
+            position: absolute;
+            right: 3%;
+            top: 3.5%;
+            font-size: 24px;
+            user-select: none;
+        }
+        input[type=checkbox]{
+            display: none;
+        }
+        @media (max-width: 630px) {
+
+            input[type=checkbox]:checked ~ .menu{
+                display: block;
+            }
+            .icon{
+                display: block;
+                cursor: alias;
+            }
+            .menu{
+                display: none;
+                position: absolute;
+                background-color: rgb(220, 85, 61);
+                left: 0;
+                right: 0;
+                top: 4em;
+                text-align: center;
+                padding: 2em 0;
+            }
+            .menu li:hover{
+                display: inline-block;
+                background-color: red;
+                transition: .4s ease;
+            }
+            .menu li + li{
+                margin-top: 30px;
+            }
+            .dropdown {
+                left: 10%;
+                top: 25px;
+                transform: translateX(35%);
+                /* display: inline; */
+                border: 1px outset green;
+            }
+        }
+        @media (max-width:170px) {
+            .logo{
+                font-size: 20px;
+            }
+            
+        }
+
+    </style>
 </head>
 <body>
-    <div class="whole">
-        <nav>
-            <div class="navbar">
-                <div class="nav_button">
-                    <a href="#"><button id="login"><abbr title="Welcome back">Login:</abbr></button></a>
-                    <a href="#"><button id="register"><abbr title="check it out">Register:</abbr></button></a>
-                </div>
-                <div class="nav_image">
-                    <a href="./image/CODOFILE_free-file - Copy.png" target="_blank"><abbr title="Symbol of Power"><img src="./image/CODOFILE_free-file - Copy.png" alt="Please wait"></abbr></a>
-                </div>
-                <div class="nav_menu">
-                    <ul class="nav_ul">
-                        <li><a id="home" href="http://127.0.0.1:5500/free%20fire%20image/vacation%20web%20development/first_practise.html#" target="_blank">Home</a></li>
-                        <li><a id="blog" href="https://blogwithfaizan.blogspot.com/" target="_blank">Blog</a></li>
-                        <li><a id="youtube" href="https://www.youtube.com/channel/UC-AGAn4TpgSITpDiwBioUIg" target="_blank">Youtube</a></li>
-                        <li><a id="about" href="https://www.instagram.com/faizan_alam_._/" target="_blank">Instagram</a></li>
+    <nav class="navbar">
+        <div class="logo">CodoFile</div>
+        <ul class="nav_link">
+            <input type="checkbox" id="checking">
+            <label for="checking" class="icon">&#9776;</label>
+            <div class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li class="project">
+                    <a href="#">Project</a>
+                    <ul class="dropdown">
+                        <li>project1</li>
+                        <li>project2</li>
+                        <li>project3</li>
+                        <li>project4</li>
                     </ul>
-                </div>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About me</a></li>
             </div>
-        </nav>
-        <section>
-            <div class="sectionbar">
-                <div class="section1">
-                    <div class="sect1">
-                        <abbr title="The best thing it is visible"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi nihil sunt ab commodi at? Omnis corrupti quia consequatur laudantium officia aut doloribus perspiciatis quae quod similique minima et labore consectetur incidunt sed at, fuga tempora porro dicta maiores nihil quas, quidem hic. Aliquid quis adipisci ullam qui necessitatibus accusamus quos eligendi vero, placeat officiis ut consectetur aliquam repellat voluptatem? Placeat voluptas ab possimus doloremque. Cum voluptate commodi ullam quidem facere in fuga eaque earum ratione sit! Sunt, est atque! Qui in quos consectetur sunt voluptatum, deleniti sed rerum voluptatem ab dolores autem fuga enim repellendus temporibus quam. Aperiam, quas!</p></abbr>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-    </div>
+        </ul>
+    </nav>
 </body>
 </html>
